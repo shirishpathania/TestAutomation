@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>Projects.ParcelEvents.features.ParcelEvents-Happy_Path</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">2</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2021-04-23 09:21:33 AM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1.1:23]"><span>[1.1:23]</span> <span>Generate Token</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.2:24]"><span>[1.2:24]</span> <span>Generate Token</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">Projects/ParcelEvents/features/ParcelEvents-Happy_Path.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">sample karate test script</span>
+          <span class="feature-description">for help, see: https://github.com/intuit/karate/wiki/IDE-Support</span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:23]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:23]</span>
+                <span class="scenario-name">Generate Token</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.23">
+      <div class="step-ref failed">23</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>scenario [run] failed</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.23">&gt;&gt;&gt;&gt; js failed:
+01: (function fn() {
+02: 
+03:   var config = {
+04:         baseURL: &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;
+05:         }
+06: 
+07:   var env = karate.env;
+08:   if(env == &#39;qa&#39;){
+09:     config.baseURL = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;;
+10:   }
+11:   else(env == &#39;uat&#39;){
+12:     config.baseURL = &#39;https://uat.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;;
+13:   }
+14:   karate.configure(&#39;logPrettyResponse&#39;, true);
+15:   return config;
+16: })
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:11:20 Expected ; but found {
+  else(env == &#39;uat&#39;){
+                    ^
+Unnamed:14:2 Expected ) but found karate
+  karate.configure(&#39;logPrettyResponse&#39;, true);
+  ^
+Unnamed:15:2 Invalid return statement
+  return config;
+  ^
+Unnamed:16:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:124)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:120)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1246)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:287)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:362)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:388)
+09:21:33.774 scenario [run] failed
+&gt;&gt;&gt;&gt; js failed:
+01: (function fn() {
+02: 
+03:   var config = {
+04:         baseURL: &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;
+05:         }
+06: 
+07:   var env = karate.env;
+08:   if(env == &#39;qa&#39;){
+09:     config.baseURL = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;;
+10:   }
+11:   else(env == &#39;uat&#39;){
+12:     config.baseURL = &#39;https://uat.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;;
+13:   }
+14:   karate.configure(&#39;logPrettyResponse&#39;, true);
+15:   return config;
+16: })
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:11:20 Expected ; but found {
+  else(env == &#39;uat&#39;){
+                    ^
+Unnamed:14:2 Expected ) but found karate
+  karate.configure(&#39;logPrettyResponse&#39;, true);
+  ^
+Unnamed:15:2 Invalid return statement
+  return config;
+  ^
+Unnamed:16:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:124)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:120)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1246)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:287)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:362)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:388)
+
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.2:24]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.2:24]</span>
+                <span class="scenario-name">Generate Token</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.24">
+      <div class="step-ref failed">24</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>scenario [run] failed</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.24">&gt;&gt;&gt;&gt; js failed:
+01: (function fn() {
+02: 
+03:   var config = {
+04:         baseURL: &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;
+05:         }
+06: 
+07:   var env = karate.env;
+08:   if(env == &#39;qa&#39;){
+09:     config.baseURL = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;;
+10:   }
+11:   else(env == &#39;uat&#39;){
+12:     config.baseURL = &#39;https://uat.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;;
+13:   }
+14:   karate.configure(&#39;logPrettyResponse&#39;, true);
+15:   return config;
+16: })
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:11:20 Expected ; but found {
+  else(env == &#39;uat&#39;){
+                    ^
+Unnamed:14:2 Expected ) but found karate
+  karate.configure(&#39;logPrettyResponse&#39;, true);
+  ^
+Unnamed:15:2 Invalid return statement
+  return config;
+  ^
+Unnamed:16:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:124)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:120)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1246)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:287)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:362)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:388)
+09:21:33.796 scenario [run] failed
+&gt;&gt;&gt;&gt; js failed:
+01: (function fn() {
+02: 
+03:   var config = {
+04:         baseURL: &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;
+05:         }
+06: 
+07:   var env = karate.env;
+08:   if(env == &#39;qa&#39;){
+09:     config.baseURL = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;;
+10:   }
+11:   else(env == &#39;uat&#39;){
+12:     config.baseURL = &#39;https://uat.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;;
+13:   }
+14:   karate.configure(&#39;logPrettyResponse&#39;, true);
+15:   return config;
+16: })
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:11:20 Expected ; but found {
+  else(env == &#39;uat&#39;){
+                    ^
+Unnamed:14:2 Expected ) but found karate
+  karate.configure(&#39;logPrettyResponse&#39;, true);
+  ^
+Unnamed:15:2 Invalid return statement
+  return config;
+  ^
+Unnamed:16:0 Expected eof but found }
+})
+^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:124)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:120)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1246)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:287)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:362)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:388)
+
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

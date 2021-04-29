@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>src.test.java.Projects.ParcelEvents.features.ParcelEvents-Happy_Path</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2021-04-23 01:29:11 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:8]"><span>[1:8]</span> <span>Print</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/Projects/ParcelEvents/features/ParcelEvents-Happy_Path.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">sample karate test script</span>
+          <span class="feature-description">for help, see: https://github.com/intuit/karate/wiki/IDE-Support</span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:8]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:8]</span>
+                <span class="scenario-name">Print</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>31</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref failed">9</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>def envVariables = read(&#39;classpath:Projects/ParcelEvents/config/qa.js&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">31</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">13:29:11.839 src/test/java/Projects/ParcelEvents/features/ParcelEvents-Happy_Path.feature:9
+* def envVariables = read(&#39;classpath:Projects/ParcelEvents/config/qa.js&#39;)
+&gt;&gt;&gt;&gt; js failed:
+01: read(&#39;classpath:Projects/ParcelEvents/config/qa.js&#39;)
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: (function() {
+02: 
+03:     var config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;;
+04: 
+05:     return config;
+06: })
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:3:14 Expected ; but found [
+    var config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api/events&#39;;
+              ^
+
+- org.graalvm.polyglot.Context.eval(Context.java:373)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:124)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:120)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1246)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:58)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:program(Unnamed:1)
+
+- com.intuit.karate.core.ScenarioEngine.fromJsEvalException(ScenarioEngine.java:1274)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1248)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:58)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:program(Unnamed:1)
+
+src/test/java/Projects/ParcelEvents/features/ParcelEvents-Happy_Path.feature:9
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref skipped">10</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>call envVariables</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,44 @@
+{
+  "eventCode": "EMA",
+  "eventSource": "POS",
+  "eventDate": "2021-01-01T21:00:00",
+  "locationCode": "1234",
+  "operatorId": "09876",
+  "terminalId": "W9378010",
+  "trackingNumber": "LX139351028CN",
+  "itemInformation": {
+    "orderNumber": "txn_ID",
+    "classCode": "C",
+    "subClassCode": "CN",
+    "mailCategory": "A",
+    "productCode": "prod1234",
+    "billingCode": "bill1234",
+    "deliveryOptions": "add-ons list",
+    "deliveryInstructions": "text of instructions",
+    "dimensions": {
+      "weight": 20.2,
+      "width": 1,
+      "height": 1,
+      "length": 1
+    },
+    "contentValueAmt": 2000,
+    "contentValueCurrency": "NZD",
+    "insuredAmt": 2000,
+    "insuredCurrency": "NZD",
+    "additionalFees": 2000,
+    "additionalFeesCurrency": "NZD"
+  },
+  "sender": {
+    "senderAccountNumber": "123456789"
+  },
+  "addressee": {
+    "addresseeAccountNumber": "123456789",
+    "addresseeFirstName": "firstname",
+    "addresseeSurName": "surname",
+    "addresseeAddress": "123 street",
+    "addresseeCity": "city or town",
+    "addresseePostCode": "5018",
+    "addresseeCountry": "AU",
+    "addresseeDpId": "dpid"
+  }
+}

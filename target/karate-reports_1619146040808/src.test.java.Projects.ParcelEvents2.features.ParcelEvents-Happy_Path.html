@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>src.test.java.Projects.ParcelEvents2.features.ParcelEvents-Happy_Path</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">2</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2021-04-23 02:37:07 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1.1:22]"><span>[1.1:22]</span> <span>Validation Test</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.2:23]"><span>[1.2:23]</span> <span>Validation Test</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">sample karate test script</span>
+          <span class="feature-description">for help, see: https://github.com/intuit/karate/wiki/IDE-Support</span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:22]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">test</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:22]</span>
+                <span class="scenario-name">Validation Test</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:22]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:22]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.5">14:37:07.116 &lt;&lt; lock released, cached callSingle: classpath:Projects/token/token.feature
+14:37:07.124 callSingle() will cache an exception
+14:37:07.124 &lt;&lt; lock released, cached callSingle: classpath:Projects/ParcelEvents2/config/qa.js
+14:37:07.124 callSingle() cached result is an exception
+14:37:07.124 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+* url baseURL
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:22
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+</div>   
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="1.5.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">Projects.token.token</div>
+      </div>
+      <div class="time-cell passed">695</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.5.0.call">
+    <div class="step-container" id="1.5.0.call.0.4">
+      <div class="step-ref bg-step">4</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://oauth.nzpost.co.nz/as/token.oauth2&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.5.0.call.0.4">14:37:06.363 &gt;&gt; lock acquired, begin callSingle: classpath:Projects/ParcelEvents2/config/qa.js
+14:37:06.398 &gt;&gt; lock acquired, begin callSingle: classpath:Projects/token/token.feature
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.5.0.call">
+    <div class="step-container" id="1.5.0.call.0.5">
+      <div class="step-ref bg-step">5</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param grant_type = &#39;client_credentials&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.5.0.call">
+    <div class="step-container" id="1.5.0.call.0.6">
+      <div class="step-ref bg-step">6</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param client_id = &#39;a6024f82d9204bebb949d1a10c7af08f&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.5.0.call">
+    <div class="step-container" id="1.5.0.call.0.7">
+      <div class="step-ref bg-step">7</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param client_secret = &#39;3d272F28980c4Cb1827C89cc6813F4Fe&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.5.0.call">
+    <div class="step-container" id="1.5.0.call.0.8">
+      <div class="step-ref bg-step">8</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">691</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.5.0.call.0.8">14:37:06.692 request:
+1 &gt; POST https://oauth.nzpost.co.nz/as/token.oauth2?grant_type=client_credentials&amp;client_secret=3d272F28980c4Cb1827C89cc6813F4Fe&amp;client_id=a6024f82d9204bebb949d1a10c7af08f
+1 &gt; Host: oauth.nzpost.co.nz
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/16.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+14:37:07.099 response time in milliseconds: 388
+1 &lt; 200
+1 &lt; Date: Fri, 23 Apr 2021 02:37:07 GMT
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; Referrer-Policy: origin
+1 &lt; Cache-Control: no-cache, no-store
+1 &lt; Pragma: no-cache
+1 &lt; Expires: Thu, 01 Jan 1970 00:00:00 GMT
+1 &lt; Content-Type: application/json;charset=utf-8
+1 &lt; Keep-Alive: timeout=5, max=100
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Set-Cookie: PF=yifg007JzvpjfTvNmxmFID; Domain=oauth.nzpost.co.nz; Secure
+{&quot;access_token&quot;:&quot;eyJhbGciOiJIUzI1NiIsImtpZCI6IlRFU1QiLCJwaS5hdG0iOiIxIn0.eyJzY29wZSI6W10sImNsaWVudF9pZCI6ImE2MDI0ZjgyZDkyMDRiZWJiOTQ5ZDFhMTBjN2FmMDhmIiwiZXhwIjoxNjE5MjMxODI3fQ.11K6S6tsmdNZbdK5YJyaik8f9u7BbgMlFU1LZvAIcQI&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:86399}
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.5.0.call">
+    <div class="step-container" id="1.5.0.call.0.9">
+      <div class="step-ref bg-step">9</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.5.0.call">
+    <div class="step-container" id="1.5.0.call.0.10">
+      <div class="step-ref bg-step">10</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def access_token = response.access_token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div data-parent="[1.1:22]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>def requestPayload = request</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.6">14:37:07.124 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+* def requestPayload = request
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:22
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.10">
+      <div class="step-ref failed">10</div>
+      
+      <div class="step-cell failed">
+        <span>Given</span>&nbsp;<span>path &#39;/events&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.10">14:37:07.137 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+Given path &#39;/events&#39;
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:22
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.11">
+      <div class="step-ref failed">11</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>set requestPayload.eventCode = &#39;EMA&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.11">14:37:07.137 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+* set requestPayload.eventCode = &#39;EMA&#39;
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:22
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.12">
+      <div class="step-ref failed">12</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>request requestPayload</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.12">14:37:07.137 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+* request requestPayload
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:22
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.13">
+      <div class="step-ref failed">13</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + request_token.access_token</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.13">14:37:07.137 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+And header Authorization = &#39;Bearer &#39; + request_token.access_token
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:22
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref failed">14</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.14">14:37:07.138 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+When method post
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:22
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref failed">15</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.15">14:37:07.138 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:15
+Then status 200
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:22
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:15
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref failed">16</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>match requestPayload.eventCode == response.results.eventCode</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.16">14:37:07.138 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:16
+* match requestPayload.eventCode == response.results.eventCode
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:22
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:15
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:16
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.17">
+      <div class="step-ref failed">17</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>match response.results.eventSubType == &#39;13&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.17">14:37:07.138 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:17
+* match response.results.eventSubType == &#39;13&#39;
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:22
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:15
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:16
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:17
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.18">
+      <div class="step-ref failed">18</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>match requestPayload.trackingNumber == response.results.trackingNumber</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.18">14:37:07.139 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:18
+* match requestPayload.trackingNumber == response.results.trackingNumber
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:22
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:15
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:16
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:17
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:18
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.2:23]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">test</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.2:23]</span>
+                <span class="scenario-name">Validation Test</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.2:23]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.5">14:37:07.146 callSingle() cached result is an exception
+14:37:07.148 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+* url baseURL
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:23
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>def requestPayload = request</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.6">14:37:07.148 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+* def requestPayload = request
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:23
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.10">
+      <div class="step-ref failed">10</div>
+      
+      <div class="step-cell failed">
+        <span>Given</span>&nbsp;<span>path &#39;/events&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.10">14:37:07.148 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+Given path &#39;/events&#39;
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:23
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.11">
+      <div class="step-ref failed">11</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>set requestPayload.eventCode = &#39;EMI&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.11">14:37:07.149 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+* set requestPayload.eventCode = &#39;EMI&#39;
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:23
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.12">
+      <div class="step-ref failed">12</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>request requestPayload</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.12">14:37:07.149 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+* request requestPayload
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:23
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.13">
+      <div class="step-ref failed">13</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + request_token.access_token</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.13">14:37:07.149 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+And header Authorization = &#39;Bearer &#39; + request_token.access_token
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:23
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref failed">14</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.14">14:37:07.149 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+When method post
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:23
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref failed">15</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.15">14:37:07.149 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:15
+Then status 200
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:23
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:15
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref failed">16</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>match requestPayload.eventCode == response.results.eventCode</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.16">14:37:07.150 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:16
+* match requestPayload.eventCode == response.results.eventCode
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:23
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:15
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:16
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.17">
+      <div class="step-ref failed">17</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>match response.results.eventSubType == &#39;22&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.17">14:37:07.150 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:17
+* match response.results.eventSubType == &#39;22&#39;
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:23
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:15
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:16
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:17
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.18">
+      <div class="step-ref failed">18</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>match requestPayload.trackingNumber == response.results.trackingNumber</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.18">14:37:07.150 src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:18
+* match requestPayload.trackingNumber == response.results.trackingNumber
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:23
+karate-config.js
+&gt;&gt;&gt;&gt; js failed:
+01: function() {
+02: 
+03:   var env = &#39;qa&#39;;//karate.env;
+04:   var project = &#39;ParcelEvents2&#39;;//karate.project;
+05:   var config = {
+06:   javaLib: {}
+07:   }
+08: 
+09:   config = karate.callSingle(&#39;classpath:Projects/&#39; + project + &#39;/config/&#39; + env + &#39;.js&#39;, config);
+10: 
+11:   karate.configure(&#39;logPrettyRequest&#39;, true);
+12:   karate.configure(&#39;logPrettyResponse&#39;, true);
+13: 
+14:   return config;
+15: 
+16: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: &gt;&gt;&gt;&gt; js failed:
+01: function(config) {
+02: 
+03:     //URL
+04:     config[&#39;baseURL&#39;] = &#39;https://qa.apis.nzpost.co.nz/parceleventsexperience-1-0/api&#39;;
+05: 
+06:     //OAUTH 2.0 TOKEN
+07:     config[&#39;request_token&#39;] = karate.callSingle(&#39;classpath:Projects/token/token.feature&#39;);
+08: 
+09:     //REQUEST PAYLOAD
+10:     config[&#39;request&#39;] = read(&#39;classpath:Projects/ParcelEvents2/requests/request.json&#39;)
+11: 
+12:     return config;
+13: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: not found: Projects/ParcelEvents2/requests/request.json
+- com.intuit.karate.resource.ResourceUtils.getResource(ResourceUtils.java:120)
+- com.intuit.karate.core.ScenarioFileReader.toResource(ScenarioFileReader.java:128)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:103)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:53)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:118)
+- &lt;js&gt;.:anonymous(Unnamed:10)
+
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:221)
+- &lt;js&gt;.:anonymous(Unnamed:9)
+
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:5
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:6
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:10
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:11
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:12
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:13
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:14
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:15
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:16
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:17
+src/test/java/Projects/ParcelEvents2/features/ParcelEvents-Happy_Path.feature:18
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
