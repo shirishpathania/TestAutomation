@@ -1,4 +1,4 @@
-function() {
+function fn() {
 
   var env = 'qa';//karate.env;
   var project = 'ParcelEvents';//karate.project;
